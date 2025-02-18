@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Liability Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Income Tax Liability Calculator</h1>
+        <form id="tax-form">
+            <div class="form-group">
+                <label for="tax-regime">Tax Regime:</label>
+                <select id="tax-regime" name="tax-regime">
+                    <option value="old">Old Tax Regime</option>
+                    <option value="new">New Tax Regime</option>
+                    <option value="finance-bill-2025">Finance Bill 2025 Amendments</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="annual-income">Annual Income:</label>
+                <input type="number" id="annual-income" name="annual-income" required>
+            </div>
+            <div class="form-group">
+                <label for="deductions">Deductions:</label>
+                <input type="number" id="deductions" name="deductions">
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="assessee-type">Type of Assessee:</label>
+                <select id="assessee-type" name="assessee-type">
+                    <option value="individual">Individual</option>
+                    <option value="huf">HUF</option>
+                    <option value="company">Company</option>
+                    <!-- Add more options as necessary -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nationality">Nationality:</label>
+                <select id="nationality" name="nationality">
+                    <option value="resident">Resident</option>
+                    <option value="non-resident">Non-Resident</option>
+                </select>
+            </div>
+            <button type="submit">Calculate Tax</button>
+        </form>
+        <div id="tax-breakdown"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
